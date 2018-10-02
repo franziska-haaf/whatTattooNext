@@ -12,6 +12,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    height: 100%;
 }
 
 /*
@@ -91,7 +92,7 @@ textarea {
    ========================================================================== */
 
 body {
-  background-color: #000;
+  background: #000 url(../img/body_bg.jpg);
   color: #fff;
   font-family: 'Roboto Mono', monospace;
   font-size: 40px;
