@@ -1,5 +1,5 @@
 const TATTOO_MOTIVES = [
-  'Eagle', 'Knife', 'Heart', 'Skull'
+  'Eagle', 'Knife', 'Heart', 'Skull', 'Wind Rose', 'Arrow', 'An Astronaut being abducted by an alien'
 ];
 
 /**
