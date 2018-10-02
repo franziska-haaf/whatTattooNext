@@ -13,7 +13,6 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/my.css">
 
   <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800|Roboto+Mono" rel="stylesheet">
 </head>
@@ -30,26 +29,39 @@
   </header>
   <main>
     <div id="mainLeft">
-      Image coming
+      <span>Image coming</span>
     </div>
     <div id="mainRight">
-      <button>Tell me</button>
-      <div class="two-parted">
-        <div>Colored</div>
-        <div>Black</div>
-      </div>
-      <div class="tattoo-motive">
-        <span id="motive1"></span>
-      </div>
-      <div class="tattoo-motive">
-        <span id="motive2"></span>
-      </div>
-      <div class="tattoo-motive">
-        <span id="motive3"></span>
-      </div>
+      <form action="#">
+        <span>Choose color type:</span>
+        <ul class="colors">
+          <li class="color-group">
+            <input class="color1" name="color" type="radio" id="colored">
+            <label for="colored">Colored</label>
+          </li>
+
+          <li class="color-group">
+            <input class="color2" name="color" type="radio" id="black">
+            <label for="black">Black</label>
+          </li>
+
+        </ul>
+        <div class="tattoo-motive">
+          <span id="motive1"></span>
+        </div>
+        <div class="tattoo-motive">
+          <span id="motive2"></span>
+        </div>
+        <div class="tattoo-motive">
+          <span id="motive3"></span>
+        </div>
+
+        <button>GENERATE MY TATTOO</button>
+      </form>
     </div>
   </main>
 </div>
+
 
 
 <script src="js/main.js"></script>
