@@ -1,4 +1,4 @@
-const TATTOO_MOTIVES = ['Eagle', 'Knife', 'Heart', 'Skull', 'Rainbow', 'Bird', 'Wolf', 'Dragon', 'Dolphin', 'Star', 'Zodiac', 'Biker','I Love Mom', 'Wind Rose', 'Arrow', 'An Astronaut being abducted by an alien'];
+const TATTOO_MOTIVES = ['Eagle', 'Knife', 'Heart', 'Skull', 'Rainbow', 'Bird', 'Wolf', 'Dragon', 'Dolphin', 'Star', 'Zodiac', 'Biker','I Love Mom', 'Wind Rose', 'Arrow', 'An Astronaut being abducted by an alien', 'An amazing horse so people would look at it'];
 
 /**
  * Return a possible tattoo motive.
