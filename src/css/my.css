@@ -1,0 +1,67 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+}
+
+#content {
+  width: 1000px;
+  height: 700px;
+
+  margin: 20px auto 0;
+}
+
+header {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Coda Caption', sans-serif;
+  text-transform: uppercase;
+  font-size: 80px;
+}
+
+main {
+  width: 100%;
+}
+
+main div {
+  display: inline-block;
+}
+
+#mainLeft,
+#mainRight {
+  width: 485px;
+}
+
+#mainRight{
+  margin-left: 5px;
+}
+
+#mainRight > * {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.two-parted > div {
+  width: 230px;
+}
+
+.two-parted :last-child {
+  text-align: right;
+}
+
+#mainRight button{
+  height: 70px;
+  font-size: 40px;
+  font-family: 'Coda Caption', sans-serif;
+  text-transform: uppercase;
+}
+
+#mainRight button:hover{
+  font-size: 45px;
+}
