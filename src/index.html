@@ -12,7 +12,6 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/my.css">
 
@@ -53,8 +52,8 @@
 </div>
 
 
-<script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
@@ -67,6 +66,13 @@
   ga('send', 'pageview')
 </script>
 <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+<script>
+  //Call the functions
+  $('#motive1').text('motive 1');
+  $('#motive2').text('motive 2');
+  $('#motive3').text(getTattooMotive());
+</script>
 </body>
 
 </html>
