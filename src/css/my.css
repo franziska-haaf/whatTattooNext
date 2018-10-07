@@ -37,7 +37,7 @@ main div {
   width: 485px;
 }
 
-#mainRight{
+#mainRight {
   margin-left: 5px;
 }
 
@@ -55,17 +55,25 @@ main div {
   text-align: right;
 }
 
-#mainRight button{
+#mainRight button {
   height: 70px;
   font-size: 40px;
   font-family: 'Coda Caption', sans-serif;
   text-transform: uppercase;
 }
 
-#mainRight button:hover{
+#mainRight button:hover {
   font-size: 45px;
 }
 
-#mainLeft{
+#mainLeft {
   text-align: center;
+}
+
+#fields {
+  margin-top: 50px;
+}
+
+button {
+  cursor: pointer;
 }
