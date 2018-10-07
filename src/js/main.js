@@ -33,19 +33,24 @@ const COLORS = [
  * @param {Array} motives array of motives to choose from.
  */
 function getMotives(motives) {
+  let _motives = motives.slice();
   let _selected = [];
   const maxNoOfMotives = 3;
   // Always select at least 1 motive.
-  _selected.push(getMotive(motives));
+  _selected.push(getMotive(_motives));
 
   // Selection of subsequent motives is random. Use maxNoOfMotives to
   // determine max length of returned motives.
   for (let i = 0; i < maxNoOfMotives - 1; i++) {
     if (Math.round(Math.random()) === 1) {
       // Removes the last selected motive from the array.
-      motives = removeArrayValue(motives, _selected[-1]);
-      _selected.push(getMotive(motives));
+      _motives = removeArrayValue(_motives, _selected[_selected.length - 1]);
+      _selected.push(getMotive(_motives));
     }
+  }
+
+  while (_selected.length < maxNoOfMotives) {
+    _selected.push('---');
   }
 
   return _selected;
@@ -69,7 +74,8 @@ function getMotive(motives) {
  * @param {Array} colors Array of colors to choose from.
  */
 function getColor(colors) {
-  const color = colors[Math.floor(Math.random() * colors.length)];
+  let _colors = colors.slice();
+  const color = _colors[Math.floor(Math.random() * _colors.length)];
   return color;
 }
 
