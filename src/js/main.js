@@ -1,21 +1,3 @@
-const MOTIVES = [
-  'Eagle',
-  'Knife',
-  'Heart',
-  'Skull',
-  'Rainbow',
-  'Bird',
-  'Wolf',
-  'Dragon',
-  'Dolphin',
-  'Star',
-  'Zodiac',
-  'Biker',
-  'I Love Mom',
-  'Wind Rose',
-  'Arrow',
-  'An Astronaut being abducted by an alien'
-];
 const COLORS = [
   'Red',
   'Orange',
@@ -26,6 +8,15 @@ const COLORS = [
   'Violet',
   'Black'
 ];
+
+const MOTIVES = ['Eagle', 'Knife', 'Heart', 'Skull', 'Rainbow', 'Bird', 'Wolf', 'Dragon', 'Dolphin', 'Star', 'Zodiac', 'Biker',
+                        'I Love Mom', 'Wind Rose', 'Arrow', 'An Astronaut being abducted by an alien', 'Sonic', 'Cracked Woman Head With A Forest', 
+                        'Tiny Spider-Man Head', 'Black Octopus', 'Cthulhu', 'Dove' , 'Wonder Woman' , 'Tiger', 'Joker from Batman', 'Panther doing acid', 
+                        'Floating Astronauts Skull', 'Roaring Gorilla Head', 'all seeing eye', 'Burning Church', 'Death Star', 'A little cow',
+                        'An amazing horse so people would look at it','20 sided die','d20', 'Rainbow', 'Bongo Cat', 'Constellation', 'Planet', 'Galaxy',
+                        'Compass', 'Butterfly', 'Cross', 'Hexagram', 'Tribal', 'Book', 'Flower', 'Dandelion', 'Wings', 'Snake', 'Fox', 'Joker', 'Salvador Dalí: The Elephants', 
+                        'Hourglass', 'Ship', 'Mountains', 'Abstract Punctuation', 'Mandala', 'Unicorn','Football banter','Sword','Superhero'];
+
 
 /**
  * Master function to generate all motives required to provide
@@ -107,7 +98,6 @@ function assignValues(color, motives) {
   for (const [index, value] of motives.entries()) {
     $(`#motive${index + 1}`).text(value);
   }
-}
 
 /**
  * Generates a random tattoo design with a relevant color, and 2 motives.
@@ -116,4 +106,4 @@ function generateTattoo() {
   const color = getColor(COLORS);
   const motives = getMotives(MOTIVES);
   assignValues(color, motives);
-}
+
