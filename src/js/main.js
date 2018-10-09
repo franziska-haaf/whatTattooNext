@@ -17,6 +17,42 @@ const MOTIVES = ['Eagle', 'Knife', 'Heart', 'Skull', 'Rainbow', 'Bird', 'Wolf', 
   'Compass', 'Butterfly', 'Cross', 'Hexagram', 'Tribal', 'Book', 'Flower', 'Dandelion', 'Wings', 'Snake', 'Fox', 'Joker', 'Salvador Dalí: The Elephants',
   'Hourglass', 'Ship', 'Mountains', 'Abstract Punctuation', 'Mandala', 'Unicorn', 'Football banter', 'Sword', 'Superhero', 'Renew your mind', 'Be Nice!', 'Infinity'];
 
+const MOTIVE_POSITIONS = [
+  {top: 0, left: 210},
+  {top: 50, left: 210},
+  {top: 100, left: 210},
+  {top: 150, left: 210},
+  {top: 200, left: 210},
+  {top: 250, left: 210},
+  {top: 250, left: 180},
+  {top: 250, left: 250},
+
+  {top: 50, left: 160},
+  {top: 100, left: 160},
+  {top: 150, left: 160},
+
+  {top: 50, left: 260},
+  {top: 100, left: 260},
+  {top: 150, left: 260},
+
+  {top: 200, left: 150},
+  {top: 250, left: 140},
+  {top: 300, left: 130},
+
+  {top: 200, left: 250},
+  {top: 250, left: 240},
+  {top: 300, left: 230},
+
+  {top: 250, left: 190},
+  {top: 300, left: 190},
+  {top: 350, left: 190},
+  {top: 450, left: 190},
+
+  {top: 250, left: 240},
+  {top: 300, left: 240},
+  {top: 350, left: 240},
+  {top: 450, left: 240},
+];
 
 /**
  * Master function to generate all motives required to provide
@@ -107,6 +143,7 @@ function generateTattoo() {
   const motives = getMotives(MOTIVES);
   assignValues(color, motives);
   setTattooPosition();
+  setCirclePosition();
 }
 
 function setTattooPosition() {
@@ -128,3 +165,16 @@ function setTattooPosition() {
 function randomBoolean() {
   return Math.floor(Math.random() * 2);
 }
+
+function getMotivePosition(){
+  return MOTIVE_POSITIONS[Math.floor(Math.random() * MOTIVE_POSITIONS.length)]
+}
+
+function setCirclePosition() {
+  let position = getMotivePosition();
+  let circle = $('#circle');
+  circle.css('top',position.top);
+  circle.css('left',position.left);
+}
+
+
