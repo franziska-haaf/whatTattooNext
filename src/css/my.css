@@ -78,3 +78,7 @@ main div {
 button {
   cursor: pointer;
 }
+
+.text-label{
+  color: red;
+}
