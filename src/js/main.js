@@ -10,7 +10,8 @@ const TATTOO_MOTIVES = ['Eagle', 'Knife', 'Heart', 'Skull', 'Rainbow', 'Bird', '
  * Return a possible tattoo motive.
  */
 function getTattooMotive() {
-  //todo
+  var index = Math.floor(Math.random()*TATTOO_MOTIVES.length);
+  return TATTOO_MOTIVES[index];
 }
 
 /**
@@ -18,6 +19,6 @@ function getTattooMotive() {
  * For motive2 and motive3. Not every tattoo needs 3 parts.
  * But every tattoo needs motive1.
  */
-function randomTrue() {
-  //todo
+function randomBoolean() {
+  return Math.random() < 0.5;
 }
