@@ -19,60 +19,58 @@
 </head>
 
 <body>
-<!--[if lte IE 9]>
+  <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
   your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-<div id="content">
-  <header>
-    <h1>What Tattoo next?</h1>
-  </header>
-  <main>
-    <div id="mainLeft">
-      <img src="img/human_body_front.svg" height="600px"/>
-    </div>
-    <div id="mainRight">
-      <button>Tell me</button>
-      <div class="two-parted">
-        <div>Colored</div>
-        <div>Black</div>
+  <div id="content">
+    <header>
+      <h1>What Tattoo next?</h1>
+    </header>
+    <main>
+      <div id="mainLeft">
+        <img src="img/human_body_front.svg" height="600px" />
       </div>
-      <div class="tattoo-motive">
-        <span id="motive1"></span>
+      <div id="mainRight">
+        <button onclick="generateTattoo()">Tell me</button>
+        <div id="fields">
+          <div class="tattoo-motive">
+            <div>Color:</div>
+            <span id="color">---</span>
+          </div>
+          <div class="tattoo-motive">
+            <div>Motive 1:</div>
+            <span id="motive1">---</span>
+          </div>
+          <div class="tattoo-motive">
+            <div>Motive 2:</div>
+            <span id="motive2">---</span>
+          </div>
+          <div class="tattoo-motive">
+            <div>Motive 3:</div>
+            <span id="motive3">---</span>
+          </div>
+        </div>
       </div>
-      <div class="tattoo-motive">
-        <span id="motive2"></span>
-      </div>
-      <div class="tattoo-motive">
-        <span id="motive3"></span>
-      </div>
-    </div>
-  </main>
-</div>
+    </main>
+  </div>
 
 
-<script src="js/main.js"></script>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-  window.ga = function () {
-    ga.q.push(arguments)
-  };
-  ga.q = [];
-  ga.l = +new Date;
-  ga('create', 'UA-XXXXX-Y', 'auto');
-  ga('send', 'pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-
-<script>
-  //Call the functions
-  $('#motive1').text('motive 1');
-  $('#motive2').text('motive 2');
-  $('#motive3').text(getTattooMotive());
-</script>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
 </html>
