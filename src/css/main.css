@@ -12,6 +12,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    height: 100%;
 }
 
 /*
@@ -90,19 +91,80 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+/*	image : https://www.pinterest.ca/pin/847239748619370144*/
+  background: #000 url(../img/body_bg.jpg);
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+}
+
+#content {
+  width: 1000px;
+  height: 700px;
+
+  margin: 20px auto 0;
+}
+
+header {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Coda Caption', sans-serif;
+  text-transform: uppercase;
+  font-size: 80px;
+  color: orange;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
 
+#mainLeft,
+#mainRight {
+  width: 50%;
+}
 
+#mainLeft  span,
+#mainRight span {
+    text-decoration: underline;
+}
 
+#mainRight button{
+  width: 100%;
+  font-size: 30px;
+  padding: 10px;
+  font-family: 'Coda Caption', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  position: relative;
+  top:0px;
+  left:0px;
+  margin-bottom: 0.4em;
+}
 
+#mainRight button:hover{
+  box-shadow: 10px 10px 0 #555;
+}
 
+#mainRight button:active{
+  box-shadow: 5px 5px 0 #555;
+}
 
+.tattoo-motive {
+    display: flex;
+    justify-content: space-between;
+}
 
-
-
-
-
-
+.tattoo-motive:not(.color-wrap) {
+    flex-direction: column;
+}
 
 
 
