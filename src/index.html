@@ -18,74 +18,60 @@
 </head>
 
 <body>
-<!--[if lte IE 9]>
+  <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
   your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-<div id="content">
-  <header>
-    <h1>What Tattoo next?</h1>
-  </header>
-  <main>
-    <div id="mainLeft">
-      <img src="img/human_body_front.svg" height="600px"/>
-    </div>
-    <div id="mainRight">
-      <form action="#">
-        <span>Choose color type:</span>
-        <ul class="colors">
-          <li class="color-group">
-            <input class="color1" name="color" type="radio" id="colored">
-            <label for="colored">Colored</label>
-          </li>
-
-          <li class="color-group">
-            <input class="color2" name="color" type="radio" id="black">
-            <label for="black">Black</label>
-          </li>
-
-        </ul>
-
-        <div class="tattoo-motive">
-          <span id="motive1"></span>
+  <div id="content">
+    <header>
+      <h1>What Tattoo next?</h1>
+    </header>
+    <main>
+      <div id="mainLeft">
+        <span class="circle" id="circle"></span>
+        <img src="img/human_body_front.svg" height="600px" class="hidden" id="frontImg"/>
+        <img src="img/human_body_back.svg" height="600px" id="backImg"/>
+      </div>
+      <div id="mainRight">
+        <button onclick="generateTattoo()">Tell me</button>
+        <div id="fields">
+          <div class="tattoo-motive color-wrap">
+            <div class="text-label">Color:</div>
+            <span id="color">---</span>
+          </div>
+          <div class="tattoo-motive">
+            <div class="text-label">Motive 1:</div>
+            <span id="motive1">---</span>
+          </div>
+          <div class="tattoo-motive">
+            <div class="text-label">Motive 2:</div>
+            <span id="motive2">---</span>
+          </div>
+          <div class="tattoo-motive">
+            <div class="text-label">Motive 3:</div>
+            <span id="motive3">---</span>
+          </div>
         </div>
-        <div class="tattoo-motive">
-          <span id="motive2"></span>
-        </div>
-        <div class="tattoo-motive">
-          <span id="motive3"></span>
-        </div>
-
-        <button>GENERATE MY TATTOO</button>
-      </form>
-    </div>
-  </main>
-</div>
+      </div>
+    </main>
+  </div>
 
 
+  <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
 
-<script src="js/main.js"></script>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-  window.ga = function () {
-    ga.q.push(arguments)
-  };
-  ga.q = [];
-  ga.l = +new Date;
-  ga('create', 'UA-XXXXX-Y', 'auto');
-  ga('send', 'pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-
-<script>
-  //Call the functions
-  $('#motive1').text('motive 1');
-  $('#motive2').text('motive 2');
-  $('#motive3').text(getTattooMotive());
-</script>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
 </html>

@@ -26,6 +26,7 @@ header h1 {
 
 main {
   width: 100%;
+  display: flex;
 }
 
 main div {
@@ -37,7 +38,7 @@ main div {
   width: 485px;
 }
 
-#mainRight{
+#mainRight {
   margin-left: 5px;
 }
 
@@ -55,17 +56,45 @@ main div {
   text-align: right;
 }
 
-#mainRight button{
+#mainRight button {
   height: 70px;
   font-size: 40px;
   font-family: 'Coda Caption', sans-serif;
   text-transform: uppercase;
 }
 
-#mainRight button:hover{
+#mainRight button:hover {
   font-size: 45px;
 }
 
-#mainLeft{
+#mainLeft {
   text-align: center;
+  position: relative;
 }
+
+.circle{
+  content: '';
+  position: absolute;
+  border: 2px solid red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#fields {
+  margin-top: 50px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.text-label{
+  color: red;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+

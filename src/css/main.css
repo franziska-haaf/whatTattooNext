@@ -136,60 +136,6 @@ main {
     text-decoration: underline;
 }
 
-.colors {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.4em 0;
-  flex-wrap: wrap;
-}
-
-.colors li {
-  list-style: none;
-}
-
-.colors label {
-  border: 4px solid rgba(255, 255, 255, 0);
-  transition: all 0.3s ;
-  padding: 0.3em;
-  width: 50%;
-  position: relative;
-}
-
-
-.color-group label::before {
-  content: '✓';
-  position: absolute;
-  right: -2em;
-  padding: 0.2em;
-  top: 50%;
-  border-radius: 50px;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s;
-  opacity: 0;
-}
-
-.colors input {
-  display: none;
-}
-
-.color1:checked + label {
-  border-color: orange;
-
-}
-
-.color1:checked + label::before {
-  opacity: 1;
-}
-
-.color2:checked + label{
-  border-color: #fff;
-}
-
-.color2:checked + label::before {
-  opacity: 1;
-}
-
 #mainRight button{
   width: 100%;
   font-size: 30px;
@@ -200,6 +146,7 @@ main {
   position: relative;
   top:0px;
   left:0px;
+  margin-bottom: 0.4em;
 }
 
 #mainRight button:hover{
@@ -207,8 +154,16 @@ main {
 }
 
 #mainRight button:active{
-
   box-shadow: 5px 5px 0 #555;
+}
+
+.tattoo-motive {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tattoo-motive:not(.color-wrap) {
+    flex-direction: column;
 }
 
 
