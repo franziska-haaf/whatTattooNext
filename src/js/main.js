@@ -1,59 +1,3 @@
-const COLORS = [
-  'Red',
-  'Orange',
-  'Yellow',
-  'Green',
-  'Blue',
-  'Indigo',
-  'Violet',
-  'Black'
-];
-
-const MOTIVES = ['Eagle', 'Knife', 'Heart', 'Skull', 'Rainbow', 'Bird', 'Wolf', 'Dragon', 'Dolphin', 'Star', 'Zodiac', 'Biker',
-  'I Love Mom', 'Wind Rose', 'Arrow', 'An Astronaut being abducted by an alien', 'Sonic', 'Cracked Woman Head With A Forest',
-  'Tiny Spider-Man Head', 'Black Octopus', 'Cthulhu', 'Dove', 'Wonder Woman', 'Tiger', 'Joker from Batman', 'Panther doing acid',
-  'Floating Astronauts Skull', 'Roaring Gorilla Head', 'all seeing eye', 'Burning Church', 'Death Star', 'A little cow',
-  'An amazing horse so people would look at it', '20 sided die', 'd20', 'Rainbow', 'Bongo Cat', 'Constellation', 'Planet', 'Galaxy',
-  'Compass', 'Butterfly', 'Cross', 'Hexagram', 'Tribal', 'Book', 'Flower', 'Dandelion', 'Wings', 'Snake', 'Fox', 'Joker', 'Salvador Dalí: The Elephants',
-  'Hourglass', 'Ship', 'Mountains', 'Abstract Punctuation', 'Mandala', 'Unicorn', 'Football banter', 'Sword', 'Superhero', 'Renew your mind', 'Be Nice!', 'Infinity'];
-
-const MOTIVE_POSITIONS = [
-  {top: 0, left: 210},
-  {top: 50, left: 210},
-  {top: 100, left: 210},
-  {top: 150, left: 210},
-  {top: 200, left: 210},
-  {top: 250, left: 210},
-  {top: 250, left: 180},
-  {top: 250, left: 250},
-
-  {top: 50, left: 160},
-  {top: 100, left: 160},
-  {top: 150, left: 160},
-
-  {top: 50, left: 260},
-  {top: 100, left: 260},
-  {top: 150, left: 260},
-
-  {top: 200, left: 150},
-  {top: 250, left: 140},
-  {top: 300, left: 130},
-
-  {top: 200, left: 250},
-  {top: 250, left: 240},
-  {top: 300, left: 230},
-
-  {top: 250, left: 190},
-  {top: 300, left: 190},
-  {top: 350, left: 190},
-  {top: 450, left: 190},
-
-  {top: 250, left: 240},
-  {top: 300, left: 240},
-  {top: 350, left: 240},
-  {top: 450, left: 240},
-];
-
 /**
  * Master function to generate all motives required to provide
  * a tattoo result.
@@ -138,12 +82,15 @@ function assignValues(color, motives) {
 /**
  * Generates a random tattoo design with a relevant color, and 2 motives.
  */
-function generateTattoo() {
-  const color = getColor(COLORS);
-  const motives = getMotives(MOTIVES);
-  assignValues(color, motives);
-  setTattooPosition();
-  setCirclePosition();
+function generateTattoo() {	
+	getData(function(data){
+		const color = getColor(data.COLORS);
+		const motives = getMotives(data.MOTIVES);
+		assignValues(color, motives);
+		setTattooPosition();
+		setCirclePosition(data.MOTIVE_POSITIONS);	 
+	});
+ 
 }
 
 function setTattooPosition() {
@@ -166,15 +113,32 @@ function randomBoolean() {
   return Math.floor(Math.random() * 2);
 }
 
-function getMotivePosition(){
-  return MOTIVE_POSITIONS[Math.floor(Math.random() * MOTIVE_POSITIONS.length)]
+function getMotivePosition(position){
+  return position[Math.floor(Math.random() * position.length)]
 }
 
-function setCirclePosition() {
-  let position = getMotivePosition();
+function setCirclePosition(positions) {
+  let position = getMotivePosition(positions);
   let circle = $('#circle');
   circle.css('top',position.top);
   circle.css('left',position.left);
 }
 
-
+function getData(callback){
+	$.ajax({
+        type: "GET",
+        url: 'js/tattoo.json',
+		data:{},
+		beforeSend: function(xhr){
+			if (xhr.overrideMimeType)
+			{
+			  xhr.overrideMimeType("application/json");
+			}
+		},
+        dataType : 'json', 
+        crossDomain:true,
+        success: function(data, status, xhr) {
+            callback(data);
+        }
+    });
+}
