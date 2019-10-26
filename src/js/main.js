@@ -15,7 +15,8 @@ const MOTIVES = ['Eagle', 'Knife', 'Heart', 'Skull', 'Rainbow', 'Bird', 'Wolf', 
   'Floating Astronauts Skull', 'Roaring Gorilla Head', 'all seeing eye', 'Burning Church', 'Death Star', 'A little cow',
   'An amazing horse so people would look at it', '20 sided die', 'd20', 'Rainbow', 'Bongo Cat', 'Constellation', 'Planet', 'Galaxy',
   'Compass', 'Butterfly', 'Cross', 'Hexagram', 'Tribal', 'Book', 'Flower', 'Dandelion', 'Wings', 'Snake', 'Fox', 'Joker', 'Salvador Dalí: The Elephants',
-  'Hourglass', 'Ship', 'Mountains', 'Abstract Punctuation', 'Mandala', 'Unicorn', 'Football banter', 'Sword', 'Superhero', 'Renew your mind', 'Be Nice!', 'Infinity'];
+  'Hourglass', 'Ship', 'Mountains', 'Abstract Punctuation', 'Mandala', 'Unicorn', 'Football banter', 'Sword', 'Superhero', 'Renew your mind', 'Be Nice!', 
+  'Infinity', 'The Jones', 'The Iron Throne', 'HTML5 Logo', 'CSS3 Logo', 'Red Color HexCode', 'The Logitech G Logo', 'The poop emoji'];
 
 const MOTIVE_POSITIONS = [
   {top: 0, left: 210},
@@ -27,11 +28,11 @@ const MOTIVE_POSITIONS = [
   {top: 250, left: 180},
   {top: 250, left: 250},
 
-  {top: 50, left: 160},
+  //{top: 50, left: 160},
   {top: 100, left: 160},
   {top: 150, left: 160},
 
-  {top: 50, left: 260},
+  //{top: 50, left: 260},
   {top: 100, left: 260},
   {top: 150, left: 260},
 
